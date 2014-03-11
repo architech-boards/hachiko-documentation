@@ -1,4 +1,4 @@
-Architech's Hachiko/SDRAM documentation
+Architech's hachiko documentation
 =======================================
 
 .. image:: _static/hachiko.png
@@ -6,7 +6,7 @@ Architech's Hachiko/SDRAM documentation
 
 .. only:: html
 
-Welcome to **Hachiko/SDRAM** documentation!
+Welcome to **hachiko** documentation!
 
 If you are a new user of the **Yocto based SDK** we suggest you to read the
 
