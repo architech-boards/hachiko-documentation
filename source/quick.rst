@@ -41,8 +41,8 @@ you can:
 
 Click on **run bitbake**, you will be show a terminal with the enviroment loaded to start to build an image.
 
-Build the minimal-dev image
-===========================
+Build the core-image-minimal-dev image
+======================================
 
 1. Open with **vim** the file **local.conf**:
 
@@ -69,15 +69,15 @@ with these lines will be build in the image the **tcf-agent** and the **gdbserve
 
 	For an useful tutorial use this command on the prompt: vimtutor
 
-3. Build the **minimal-dev** image with the following command:
+3. Build the **core-image-minimal-dev** image with the following command:
 
 ::
 
-	$ bitbake minimal-dev
+	$ bitbake core-image-minimal-dev
 
 .. important::
 
-	If the target board is a hachiko-tiny the minimal-dev is named **tiny-image** so use the command:
+	If the target board is a hachiko-tiny the core-image-minimal-dev is named **tiny-image** so use the command:
 
 	$ bitbake tiny-image
 
@@ -91,7 +91,7 @@ At the end of the build the image will be automatically saved in *hachiko/yocto/
 
 ::
 
-	$ sudo tar -zxvf tmp/deploy/images/hachiko/minimal-dev.tgz -C /home/architech/architech_sdk/architech/hachiko/sysroot/
+	$ sudo tar -zxvf tmp/deploy/images/hachiko/core-image-minimal-dev.tgz -C /home/architech/architech_sdk/architech/hachiko/sysroot/
 
 .. note::
 
