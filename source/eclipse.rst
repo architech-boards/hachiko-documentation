@@ -44,6 +44,10 @@ The left-hand navigation pane shows your project. You can display your source by
 
 .. image:: _static/projectexplorer.jpg
  
+* Select *Project→Properties→Yocto Project Settings* and check *Use project specific settings*
+
+.. image:: _static/projectsetting.jpg
+
 Building the Project
 --------------------
 

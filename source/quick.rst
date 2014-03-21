@@ -41,8 +41,8 @@ you can:
 
 Click on **run bitbake**, you will be show a terminal with the enviroment loaded to start to build an image.
 
-Build the core-image-minimal-dev image
-======================================
+Build the core-image-minimal-dev
+================================
 
 1. Open with **vim** the file **local.conf**:
 
@@ -116,7 +116,11 @@ Create a HelloWorld project
 
 4. Insert *Author* field and click on *Finish* button. Select *Yes* on the "Open Associated Perspective?" question.
 
-5. Build the project from *Project -> Build All*.
+5. Select *Project→Properties→Yocto Project Settings* and check *Use project specific settings*
+
+.. image:: _static/projectsetting.jpg
+
+6. Build the project from *Project -> Build All*.
 
 Debug the application on the target board
 -----------------------------------------
