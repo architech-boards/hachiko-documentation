@@ -1,40 +1,65 @@
-Qt Creator IDE
-==============
+Qt Creator
+==========
 
 .. image:: _static/qt-0.png
 	   :align: left
 
-| **Qt** is a cross-platform application framework that is used for developing application software with a graphical user interface (GUI). 
-| **Qt Creator** is a cross-platform C++ IDE, it includes a visual debugger and an integrated GUI layout and forms designer. 
-| The versions used in this SDK are **Qt SDK 4.8.5** and **Qt Creator 2.8.1**.
-| It is possible to compile applications for **x86** and **ARM** processors. 
-| You can debug the program on the virtual machine or on hachiko Board.
+| **Qt** is a cross-platform application framework that is used to build applications. One of the best features of Qt is its capability of generating Graphical User Interfaces (GUIs).
+| **Qt Creator** is a cross-platform C++ IDE which includes a visual debugger, an integrated GUI layout and form designer. It makes possible to compile and debug applications on both **x86** (host) and **ARM** (target) machines.
+| This SDK relies on **version 4.8.5** of Qt and **version 2.8.1** of Qt Creator.
+
 |
+|
+| Before getting our hands dirty, make sure all these steps have been followed:
 
-.. note::
+1. Use :ref:`Hob <howToUseHOB>` or :ref:`Bitbake <bitbake_label>` to build an image with *openssh* and development support (that is, it must include all the necessary libraries, header files, the *tcf-agent* program and *gdbserver*) included
 
- Before reading this Chapter you should be able to use HOB, bitbake.
+2. Deploy the :ref:`root file system <rootfs_label>` just generated on the final media used to boot the board
 
-Build image with qt
--------------------
+3. Replicate the same root file system into directory
 
-1. With HOB or bitbake build an image with Qt libreries. To see how to do this, refer to :ref:`howToUseHOB` and/or :ref:`bitbake_label` Chapters.
+.. host::
 
-2. Once the image has been built uncompress in the sysroot folder in target board and in "hachiko/sysroot".
+ /home/architech/architech_sdk/architech/hachiko/sysroot
 
+4. Copy the Qt Libraries to the board media used to boot
+
+.. host::
+
+ | sudo mkdir -p /path/to/board/sysroot/**usr/local/Trolltech/**
+ | sudo cp -r /usr/local/Trolltech/Hachiko/\* /path/to/board/sysroot/**usr/local/Trolltech/**
+
+5. Copy the Qt Libraries to your sdk sysroot directory
+
+.. host::
+
+ | sudo mkdir -p ~/architech_sdk/architech/hachiko/sysroot/usr/local/Trolltech/
+ | sudo cp -r /usr/local/Trolltech/Hachiko/\* ~/architech_sdk/architech/hachiko/sysroot/usr/local/Trolltech
+
+6. Unmount the media used to boot the board from your computer and insert it into the board
+
+7. :ref:`Power-On <poweron_label>` the board
+
+8. Open up the :ref:`serial console <serial_console_label>`.
+
+9. Provide a working :ref:`network <network_label>` connection between your workstation and the board (connector *XF1*), so, be sure that:
+
+ 1. your board has ip address 192.168.0.10 on interface eth0, and
+
+ 2. your PC has an ip address in the same family of addresses, e.g. 192.168.0.100. 
 
 Hello World!
 ------------
 
-The purpose of this example project is to generate a form with an "Hello World" label in it, at the beginning on the x86 virtual machine and than on the hachiko board.
+The purpose of this example project is to generate a form with an "Hello World" label in it, at the beginning on the x86 virtual machine and than on Hachiko/SDRAM board.
 
 To create the project follow these steps:
 
-1. Launch Qt Creator either from the **Welcome Screen** (**Develop->IDEs->Qt Creator**)
+1. Use the **Welcome Screen** to run Qt Creator by selecting *Architech→Hachiko/SDRAM→Develop with Qt Creator*
 
 .. image:: _static/qtCreatorStart.png
 
-2. Go to *File -> Open File or Project* to open **QtHelloWorld.pro** file located in *hachiko/workspace/qt/QtHelloWorld/* directory.
+2. Go to *File -> Open File or Project* to open **QtHelloWorld.pro** file located in */home/architech/architech_sdk/architech/hachiko/workspace/qt/QtHelloWorld/* directory.
 
 3. Click on "QtHelloWorld" icon to open project menu.
 
@@ -56,7 +81,7 @@ To create the project follow these steps:
 
 .. image:: _static/qt-5.png
 
-In the next section we will debug our Hello World! application directly on hachiko.
+In the next section we will debug our Hello World! application directly on Hachiko/SDRAM.
 
 Debug Hello World project
 -------------------------
@@ -67,13 +92,13 @@ Debug Hello World project
 
 9. Copy the generated executable to the target board (e.g /home/root/).
 
-::
+.. host::
 
-  scp workspace/qt/build-QtHelloWorld-Hachiko-Debug/QtHelloWorld root@192.168.0.10:/home/root
+  scp /home/architech/architech_sdk/architech/hachiko/workspace/qt/build-QtHelloWorld-Hachiko-Debug/QtHelloWorld root@192.168.0.10:/home/root
 
 10. Use minicom to launch gdbserver application on the target board:
 
-::
+.. board::
 
   gdbserver :10000 QtHelloWorld -qws
 
@@ -88,7 +113,7 @@ Debug Hello World project
 
 - Kit: **hachiko**
 
-- Local executable: **<installation_folder>/architech_sdk/architech/hachiko/workspace/qt/build-QtHalloWorld-hachiko-Debug/QtHelloWorld**
+- Local executable: **/home/architech/architech_sdk/architech/hachiko/workspace/qt/build-QtHelloWorld-hachiko-Debug/QtHelloWorld**
 
 Press **OK** button to start the debug.
 

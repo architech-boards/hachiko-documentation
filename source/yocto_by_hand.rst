@@ -1,5 +1,5 @@
-Yocto for Hachiko/SDRAM by hand
-===============================
+Yocto
+=====
 
 The easiest way to setup and keep all the necessary meta-layers in sync with upstream repositories
 is achieved by means of Google's **repo** tool.
@@ -13,13 +13,13 @@ The following steps are necessary for a clean installation:
 
 4) Download the manifest
 
-::
+.. host::
 
  repo init -u https://github.com/architech-boards/hachiko-manifest.git -b dora -m manifest.xml
 
 5) Download the repositories
 
-::
+.. host::
 
  repo sync
 
@@ -35,13 +35,13 @@ When you want your local repositories to be updated, just:
 
 3) Sync your repositories with upstream
 
-::
+.. host::
 
  repo sync
 
 If you really want to download everything by hand, just clone dora branch of meta-hachiko:
 
-::
+.. host::
 
  git clone -b dora https://github.com/architech-boards/meta-hachiko.git
 

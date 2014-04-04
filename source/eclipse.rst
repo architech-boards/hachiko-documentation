@@ -1,17 +1,29 @@
-Eclipse IDE
-===========
+Eclipse
+=======
 
-Eclipse is an integrated development environment (IDE). It contains a base workspace and the Yocto plug-in system to compile and debug a program for the hachiko board.
-Hereafter, the operating system that runs the IDE/debugger will be named host machine, and the board being debugged will be named target machine.
-The host machine could be running as a virtual machine guest operating system, anyway, the documentation for the host machine running as a guest operating system and as host operating system is exactly the same.
+Eclipse is an integrated development environment (IDE). It contains a base workspace
+and the Yocto plug-in system to compile and debug a program for Hachiko/SDRAM. Hereafter,
+the operating system that runs the IDE/debugger will be named host machine, and the
+board being debugged will be named target machine. The host machine could be running
+as a virtual machine guest operating system, anyway, the documentation for the host
+machine running as a guest operating system and as host operating system is exactly
+the same.
 
-Pay attention before to start writing your application you need:
+To write your application you need:
 
-* a filesystem (you can use bitbake/hob to build your preferred filesystem) with develop support (that is, it must include all the necessary header files, the *tcf-agent* program and *gdbserver*)
+* a root file system filesystem (you can use :ref:`bitbake <bitbake_label>`/:ref:`hob <hob_label>` to build your preferred filesystem) with development support (that is, it must include all the necessary libraries, header files, the *tcf-agent* program and *gdbserver*) included
 
-* an SD card already partitioned, with the bootloader in the FAT partition, and
+* a media with the :ref:`root filesystem <rootfs_label>` installed and, if necessary, the bootloader
 
-* a network connect between the host machine and the target machine.
+* Hachiko/SDRAM :ref:`powered up <poweron_label>` with the aforementioned root file system
+
+* a working :ref:`serial console <serial_console_label>` terminal
+
+* a working :ref:`network <network_label>` connection between your workstation and the board (connector *XF1*), so, be sure that:
+
+ 1. your board has ip address 192.168.0.10 on interface eth0, and
+
+ 2. your PC has an ip address in the same family of addresses, e.g. 192.168.0.100. 
 
 .. index:: Project
 
@@ -39,8 +51,9 @@ To create a project based on a Yocto template and then display the source code, 
 * Be sure the *License* field is correct.
 * Click *Finish*.
 
-**Note:** If the "open perspective" prompt appears, click *Yes* so that you enter in the C/C++ perspective.
-The left-hand navigation pane shows your project. You can display your source by double clicking the project's source file.
+.. note::
+
+ If the "open perspective" prompt appears, click *Yes* so that you enter in C/C++ perspective. The left-hand navigation panel shows your project. You can display your source by double clicking on the project source file.
 
 .. image:: _static/projectexplorer.jpg
  
@@ -61,7 +74,9 @@ To add more libraries to compile:
 * In LDFLAGS field, you can specify the libraries you use with -lname_library and you can also specify the path where to look for libraries with -Lpath_library
 * Click on Project→Build All to compile the project
 
-**Note:** All libraries must be located in *architech_sdk/architech/hachiko/sysroot* subdirectories.
+.. note::
+
+ All libraries must be located in */home/architech/architech_sdk/architech/hachiko/sysroot* subdirectories.
 
 .. image:: _static/autotools.jpg
 
@@ -70,25 +85,22 @@ To add more libraries to compile:
 Deploying and Debugging the Application
 ---------------------------------------
 
-Connect the hachiko board to the PC by means of a usb cable to power the board and to have the serial console. Once you built the project and the board is running the image, use minicom to run **tcf-agent** program in target board:
+Connect Hachiko/SDRAM console to your PC and power-on the board. Once you built the project and the board is running the image, use minicom to run **tcf-agent** program in target board:
 
-::
+.. board::
 
- Yocto (Built by Poky 7.0.1) 1.2.1                                               
-  ttyO0                                                                          
-                                                                                
- hachiko login: root                                                             
- root@hachiko:~# /etc/init.d/tcf-agent restart
+ | hachiko login: root                                                             
+ | /etc/init.d/tcf-agent restart
 
 On the Host machine, follow these steps to let **Eclipse** deploy and debug your application:
 
 * Select Run→Debug Configurations...
-* In the left area, expand *C/C++Remote Application*.
+* In the left area, expand *C/C++ Remote Application*.
 * Locate your project and select it to bring up a new tabbed view in the *Debug Configurations* Dialog.
 
 .. image:: _static/debugform.jpg
 
-* Insert in *C/C++ Application* the path and the name file where is the binary compiled.
+* Insert in *C/C++ Application* the filepath of your application binary on your host machine.
 * Click on "New" button near the drop-down menu in the *Connection* field.
 * Select *TCF* icon.
 
@@ -98,11 +110,11 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 
 .. image:: _static/tcf2.jpg
 
-* Then press *Finish*.
+* Press *Finish*.
 
 * Use the drop-down menu now in the *Connection* field and pick the IP Address you entered earlier.
 
-* Enter the absolute path on the target into which you want to deploy the application. Use the *Browse* button near *Remote Absolute File Path for C/C++Application:* field. No password is needed.
+* Enter the absolute path on the target into which you want to deploy the application. Use *Browse* button near *Remote Absolute File Path for C/C++Application:* field. No password is needed.
 
 .. image:: _static/remotepath.png
 
@@ -114,17 +126,24 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 
 .. image:: _static/gdb.jpg
 
-* In GDB Debugger field insert the absoulute path where is located the gdb program of the toolchain. (e.g."/home/architech/architech_sdk/architech/hachiko/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb")
+* In GDB Debugger field, insert the filepath of gdb for your toolchain
 
-* In *Debugger* window there is the tab named *Shared Library*, click on its.
-* Add the libraries path "lib" and "usr/lib" of the rootfs (e.g. "/home/architech/architech_sdk/architech/hachiko/sysroot/lib"). These libraries must be the same used in the target board.
+.. host::
 
-.. image:: _static/libs.jpg
+ /home/architech/architech_sdk/architech/hachiko/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb
+
+* In *Debugger* window there is a tab named *Shared Library*, click on it.
+* Add the libraries paths *lib* and *usr/lib* of the rootfs (which must be the same used in the target board)
+
+.. host::
+
+ | /home/architech/architech_sdk/architech/hachiko/sysroot/lib
+ | /home/architech/architech_sdk/architech/hachiko/sysroot/usr/lib
 
 * Click *Debug* to bring up a login screen and login.
 * Accept the debug perspective. 
 
 .. important::
 
-	If debug does not works, check if tcf-agent is running on the board and gdbserver is present.
+ If debug does not work, check on the board if *tcf-agent* is running and *gdbserver* has been installed.
 

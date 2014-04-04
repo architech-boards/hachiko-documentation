@@ -1,5 +1,5 @@
-Hachiko/SDRAM's Toolchain
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Toolchain
+^^^^^^^^^
 
 Once your (virtual/)machine has been set up you can compile, customize the BSP for your board,
 write and debug applications, change the file system on-the-fly directly on the board, etc.
@@ -14,6 +14,9 @@ customize, develop and tune your board.
 
 .. _eclipse_label:
 .. include:: eclipse.rst
+
+.. _qt_framework_label:
+.. include:: qt_framework.rst
 
 .. _qt_creator_label:
 .. include:: qt_creator.rst

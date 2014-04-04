@@ -1,61 +1,56 @@
 Linux Kernel
 ============
 
-As seen for **U-Boot** in the previous section the first step is to get the kernel
-sources. As seen before the suggested way is to get them for the Yocto build
-directory (copying them elsewhere to avoid messing up Yocto) or starting from a
-vanilla kernel and patching it with the BSP patches taken from the Yocto
-meta-layer.
-Already patched sources can be found in the Yocto build directory:
+As seen for **U-Boot** in the previous section, the first step is to get the kernel
+sources, which in this guide we assume that they will be copied to directory:
 
-**Hachiko**:
+.. host::
 
-::
+ /home/architech/Documents/kernel
 
-	$BUILDDIR/tmp/work/hachiko-poky-linux-uclibceabi/linux/3.8.13-r2/linux-3.8.13/
-	
-**Hachiko/SDRAM**:
+You are free to choose the path you like the most for the kernel sources, just remember
+to replace the path used in this guide with your custom path.
+The suggested way, even for the kernel, to get the sources is to take them from the Yocto
+build directory (copying them in the aforementioned directory to avoid messing up Yocto):
 
-::
+.. host::
 
-	$BUILDDIR/hachiko64/tmp/work/hachiko64-poky-linux-gnueabi/linux/3.8.13/
+ /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/work/hachiko64-poky-linux-gnueabi/linux/3.8.13-r2/linux-3.8.13/
 
-Otherwise (patching the vanilla kernel) you can download the kernel from:
+or from the vanilla kernel tarball at this URL:
 
-`https://www.kernel.org/pub/linux/kernel/v3.0/patch-3.8.13.bz2 <https://www.kernel.org/pub/linux/kernel/v3.0/patch-3.8.13.bz2>`_.
+ `https://www.kernel.org/pub/linux/kernel/v3.0/patch-3.8.13.bz2 <https://www.kernel.org/pub/linux/kernel/v3.0/patch-3.8.13.bz2>`_.
 
-and patching it using the BSP patches found in the Hachiko meta-layer:
+and patch it using the patches found in Hachiko/SDRAM BSP meta-layer:
 
-::
+.. host::
 
-	patch -p1 -d $KERNEL_DIR < $YOCTO/meta-hachiko/recipes-kernel/linux/files/*.patch
+ patch -p1 -d /home/architech/Documents/kernel < /home/architech/architech_sdk/architech/hachiko/yocto/meta-hachiko/recipes-kernel/linux/files/\*.patch
 
-BSP patches define two different defconfig files for Hachiko using internal RAM
-and Hachiko with external RAM support (64MB):
+If you are not developing from within the official SDK, the most general solution to check
+them out and patch the sources is:
 
-**Hachiko**: 
+.. host::
 
-::
+ | cd /home/architech/Documents
+ | git clone -b dora https://github.com/architech-boards/meta-hachiko.git 
+ | patch -p1 -d /home/architech/Documents/kernel < /home/architech/Documents/meta-hachiko/recipes-kernel/linux/files/\*.patch
 
-	hachiko_defconfig
-	
-**Hachiko/SDRAM**: 
+To compile the kernel just execute these commands:
 
-::
+.. host::
 
-	hachiko64_defconfig
+ | cd /home/architech/Documents/kernel
+ | source /home/architech/architech_sdk/architech/hachiko/toolchain/environment-nofs
+ | make hachiko64_defconfig
+ | make uImage dtbs
 
-To compile the kernel:
+If you are not developing from within the original SDK, you are going to need to
+:ref:`install the cross toolchain <install_cross_toolchain>`.
+The output of the compilation process is:
 
-::
+.. host::
 
-	make ARCH=arm $DEFCONFIG
-	make ARCH=arm uImage dtbs
-
-The output of the compilation are two files:
-
-::
-
-	arch/arm/boot/uImage
-	arch/arm/boot/dts/rza1-hachiko.dtb
+ /home/architech/Documents/kernel/arch/arm/boot/uImage
+ /home/architech/Documents/kernel/arch/arm/boot/dts/rza1-hachiko.dtb
 

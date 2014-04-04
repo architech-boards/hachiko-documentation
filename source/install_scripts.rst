@@ -1,5 +1,5 @@
-Installation scripts
-====================
+Installation
+============
 
 Architech's Yocto based SDK is built on top of **Ubuntu 12.04 32bit**, hence all the scripts
 provided are proven to work on such a system.
@@ -15,11 +15,11 @@ Install a clone of the virtual machine inside your native machine
 To install the same tools you get inside the virtual machine on your native machine
 you need to download and run a system wide installation script:
 
-::
+.. host::
 
- git clone -b dora https://github.com/architech-boards/machine_installer.git
- cd machine_installer
- ./machine_install -g -p
+ | git clone -b dora https://github.com/architech-boards/machine_installer.git
+ | cd machine_installer
+ | ./machine_install -g -p
 
 where *-g* option asks the script to install and configure a few graphic customization,
 while *-p* option asks the script to install the required packages on the machine.
@@ -36,10 +36,10 @@ Install just one board
 If you don't want to install the tools for all the boards, you can install just the subset
 of tools related to Hachiko/SDRAM:
 
-::
+.. host::
 
- git clone -b dora https://github.com/architech-boards/hachiko-splashscreen.git
- cd hachiko-splashscreen
- ./run_install
+ | git clone -b dora https://github.com/architech-boards/hachiko-splashscreen.git
+ | cd hachiko-splashscreen
+ | ./run_install
 
 This script needs the same tools/packages required by *machine_install*

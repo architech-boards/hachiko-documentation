@@ -9,9 +9,9 @@ What is the password for the default user of the virtual machine?
 
 The password for the default user, that is **architech**, is:
 
-::
+.. host::
 
-  architech
+ architech
 
 What is **sudo**?
 -----------------
@@ -28,9 +28,9 @@ What is the password for user root?
 By default, Ubuntu 12.04 32bit comes with no password defined for **roor** user, to set it run the following
 command:
 
-::
+.. host::
 
-  sudo passwd root
+ sudo passwd root
 
 Linux will ask you (twice, the second time is just for confirmation) to write the password for user root.
 
@@ -42,10 +42,10 @@ How to switch from hachiko to hachiko/SDRAM and viceversa
 
 Switching from hachiko to hachiko/SDRAM or viceversa (adding or removing the external SDRAM) is a delicate operation that involves flashing a new U-Boot and using a new Kernel. To flash a new U-Boot it is needed to follow Section :ref:`flashing_NOR`, writing the new U-Boot from the U-Boot itself or from Linux. After the first boot with the new U-Boot it is always suggested to give the following commands to reset the U-Boot environment stored in the second partition of the serial NOR:
 
-::
+.. board::
 
-		env default -a
-		saveenv 
+ | env default -a
+ | saveenv 
 
 and reboot the board.
 
@@ -60,15 +60,15 @@ The default value for these parameters is:
 
 **hachiko/SDRAM**:
 
-::
+.. board::
 
-	vdc5fb0=3 vdc5fb1=4
+ vdc5fb0=3 vdc5fb1=4
 
 **Hachiko**:
 
-::
+.. board::
 
-	vdc5fb0=0 vdc5fb1=0
+ vdc5fb0=0 vdc5fb1=0
 
 The meaning of the values are here reported:
 
@@ -90,19 +90,19 @@ Channel 1 (**vdc5fb1**):
 
 It is possible to modify the default setting in U-Boot with the command:
 
-::
+.. board::
 
-	env set fbparam vdc5fb0=$B vdc5fb1=$A
+ env set fbparam vdc5fb0=$B vdc5fb1=$A
 
 with $A and $B the new set of parameters. To make the configuration permanent:
 
-::
+.. board::
 
-	saveenv
+ saveenv
 
 .. note::
 
-	For the hachiko board without external SDRAM the usage of framebuffer can result in instability if not used with care. 
+ For the hachiko board without external SDRAM the usage of framebuffer can result in instability if not used with care. 
 
 Change Framebuffer Resolution
 -----------------------------
@@ -113,13 +113,13 @@ The default kernel shipped has the following default resolutions:
 
 ::
 
-	480x272
+ 480x272
 
 **LVDS output**:
 
 ::
 
-	800x480
+ 800x480
 
 to change them the file arch/arm/mach-shmobile/rskrza1-vdc5fb.c must be modified. Specifically the two structures containing the screen timings are:
 
@@ -127,11 +127,11 @@ to change them the file arch/arm/mach-shmobile/rskrza1-vdc5fb.c must be modified
 
 ::
 
-		struct fb_videomode videomode_wqvga_lcd_kit
+ struct fb_videomode videomode_wqvga_lcd_kit
 
 **Channel 1 (LVDS)**:
 
 ::
 
-		struct fb_videomode videomode_lvds
+ struct fb_videomode videomode_lvds
 

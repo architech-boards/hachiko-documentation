@@ -5549,6 +5549,16 @@ table.docutils-hover tbody tr.info:hover > td {
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
+.admonition-host {
+  color: #498b00;
+  background-color: #e3fdde;
+  border-color: #c0fdb4;
+}
+.admonition-board {
+  color: #fb5a5a;
+  background-color: #ffdfdf;
+  border-color: #ffcdcd;
+}
 .tip {
   color: #3a87ad;
   background-color: #d9edf7;

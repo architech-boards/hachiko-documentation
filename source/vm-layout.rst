@@ -1,5 +1,5 @@
-Virtual Machine content
-=======================
+VM content
+==========
 
 The virtual machine provided by Architech contains:
 
@@ -13,7 +13,7 @@ The virtual machine provided by Architech contains:
 
 * Qt creator, installed and configured
 
-All the aforementioned tools are installed under directory **architech_sdk**,
+All the aforementioned tools are installed under directory **/home/architech/architech_sdk**,
 its sub-directories main layout is the following:
 
 ::
@@ -32,35 +32,51 @@ its sub-directories main layout is the following:
             |
             |_ hachiko
                 |
+                |_ eclipse
+                |
+                |_ java
+                |
+                |_ qtcreator
+                |
                 |_ splashscreen
                 |
                 |_ sysroot
                 |
                 |_ toolchain
                 |
+                |_ workspace
+                |   |
+                |   |_ eclipse
+                |   |
+                |   |_ qt
+                |
                 |_ yocto
                     |
                     |_ build
                     |
-                    |_ meta-hachiko
-                    |
                     |_ poky
+                    |
+                    |_ meta-hachiko
                     |
                     |_ ...
 
-**hachiko** directory contains all the tools and information needed by
-the splash screen application. In particular:
+**hachiko** directory contains all the tools composing the ArchiTech SDK for Hachiko/SDRAM board,
+along with all the information needed by the splash screen application. In particular:
 
+* *eclipse* directory is where Eclipse IDE has been installed
+* *java* directory is where the Java Virtual Machine has been installed (needed by Eclipse)
+* *qtcreator* contains the installation of Qt Creator IDE
 * *splashscreen* directory contains information and scripts used by the splash screen application,
 * *sysroot* is supposed to contain the file system you want to compile against,
-* *toolchain* is where the toolchain is installed
-* *yocto* is where you find all the meta-layers Hachiko/SDRAM requires, along with the build directory
+* *toolchain* is where the cross-toolchain has been installed installed
+* *workspace* contains the the workspaces for Eclipse and Qt Creator IDEs
+* *yocto* is where you find all the meta-layers Hachiko/SDRAM requires, along with Poky and the build directory
 
 Splash screen
 -------------
 
-The splash screen application has been designed to facilitate the access to the boards' tools.
-It can be opened clicking on the *Desktop* icon.
+The splash screen application has been designed to facilitate the access to the boards tools.
+It can be opened by clicking on its *Desktop* icon.
 
 .. image:: _static/splashscreen-icon.png
     :align: center   
