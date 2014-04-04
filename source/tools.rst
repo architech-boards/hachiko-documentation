@@ -15,10 +15,8 @@ customize, develop and tune your board.
 .. _eclipse_label:
 .. include:: eclipse.rst
 
-.. _qt_framework_label:
 .. include:: qt_framework.rst
 
-.. _qt_creator_label:
 .. include:: qt_creator.rst
 
 .. _manual_compilation_label:

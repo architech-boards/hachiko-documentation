@@ -1,3 +1,5 @@
+.. _qt_framework_label:
+
 Qt Framework
 ============
 

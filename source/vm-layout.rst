@@ -92,5 +92,5 @@ A list of all available Architech's boards will open, select Hachiko/SDRAM.
 
 A list of actions related to Hachiko/SDRAM that can be activated will appear.
 
-.. image:: _static/splashscreen-hachiko-menu.png
+.. image:: _static/splashscreen-board-menu.png
     :align: center

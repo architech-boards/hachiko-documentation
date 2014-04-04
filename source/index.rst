@@ -1,7 +1,7 @@
 Architech's Hachiko/SDRAM documentation
 =======================================
 
-.. image:: _static/hachiko.png
+.. image:: _static/board.png
     :align: center
 
 .. only:: html

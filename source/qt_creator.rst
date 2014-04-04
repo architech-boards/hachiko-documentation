@@ -1,3 +1,5 @@
+.. _qt_creator_label:
+
 Qt Creator
 ==========
 
@@ -12,7 +14,11 @@ Qt Creator
 |
 | Before getting our hands dirty, make sure all these steps have been followed:
 
-1. Use :ref:`Hob <howToUseHOB>` or :ref:`Bitbake <bitbake_label>` to build an image with *openssh* and development support (that is, it must include all the necessary libraries, header files, the *tcf-agent* program and *gdbserver*) included
+1. Use :ref:`Hob <howToUseHOB>` or :ref:`Bitbake <bitbake_label>` to build an image which includes: *openssh*, support for C++, *tcf-agent* and *gdbserver*.
+
+.. note::
+
+ You could build *qt4e-demo-image* if you want to see the demo of Qt. Just remember to complete its file system with *tcf-agent*, *gdbserver* and *openssh*.
 
 2. Deploy the :ref:`root file system <rootfs_label>` just generated on the final media used to boot the board
 
@@ -41,6 +47,14 @@ Qt Creator
 7. :ref:`Power-On <poweron_label>` the board
 
 8. Open up the :ref:`serial console <serial_console_label>`.
+
+If you based your root file system on *qt4e-demo-image*, be sure you execute this command
+
+.. board::
+
+ /etc/init.d/qtdemo stop
+
+to stop the execution of the demo application.
 
 9. Provide a working :ref:`network <network_label>` connection between your workstation and the board (connector *XF1*), so, be sure that:
 
