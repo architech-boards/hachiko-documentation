@@ -46,7 +46,7 @@ To compile the kernel just execute these commands:
  | make uImage dtbs
 
 If you are not developing from within the original SDK, you are going to need to
-:ref:`install the cross toolchain <install_cross_toolchain>`.
+:ref:`install the cross toolchain <manual_compilation_label>`.
 The output of the compilation process is:
 
 .. host::

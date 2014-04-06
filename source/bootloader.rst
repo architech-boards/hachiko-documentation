@@ -73,8 +73,8 @@ Configuration and board files for Hachiko/SDRAM board are in:
  | /home/architech/Documents/u-boot/include/configs/hachiko.h
 
 Suppose you modified something and you wanted to recompile the sources to test your patches, well, you
-need a cross-toolchain. Luckily, the SDK already contains the proper cross-toolchain. To use it to compile
-the bootloader or the operating system kernel, just run:
+need a cross-toolchain (see :ref:`manual_compilation_label` Section). Luckily, the SDK already contains
+the proper cross-toolchain. To use it to compile the bootloader or the operating system kernel, just run:
 
 .. host::
 
@@ -88,8 +88,6 @@ then you can run these commands to compile it:
  | make mrproper
  | make hachiko64
  | make
-
-.. _install_cross_toolchain:
 
 
 Once the build process completes, you can find *u-boot.bin* file inside directory */home/architech/Documents/u-boot*.
