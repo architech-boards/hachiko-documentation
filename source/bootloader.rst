@@ -9,9 +9,14 @@ to recompile it you have two ways to get the sources:
 
 Anyway, we will assume in this giude that u-boot sources will be copied to:
 
-.. host::
+.. raw:: html
 
- /home/architech/Documents/u-boot
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-171' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-171" class="language-markup">/home/architech/Documents/u-boot</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 and such directory does not yet exists on your PC.
 Of course, you are free to choose the path you like the most for u-boot sources, just remember
@@ -24,15 +29,25 @@ documentation. To avoid messing up Yocto recipes and installation, it is desirab
 patched u-boot sources you find in the build directory elsewhere. The directory we are talking
 about is this one:
 
-.. host::
+.. raw:: html
 
- /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/work/hachiko64-poky-linux-gnueabi/u-boot/2013.04-r0/u-boot-2013.04/
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-172' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-172" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/work/hachiko64-poky-linux-gnueabi/u-boot/2013.04-r0/u-boot-2013.04/</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Replace:
 
-.. host::
+.. raw:: html
 
- /home/architech/architech_sdk/architech/hachiko/yocto/build/
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-173' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-173" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 all over this chapter with your custom build directory path if you are not working with the default SDK 
 build directory.
@@ -44,50 +59,80 @@ Hachiko/SDRAM board uses U-Boot version 2013.04, which can be downloaded from:
 
 otherwise a git repository is available for cloning:
 
-.. host::
+.. raw:: html
 
- | cd /home/architech/Documents
- | git clone -b v2013.04 http://git.denx.de/u-boot.git
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-174' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-174" class="language-markup">cd /home/architech/Documents
+ git clone -b v2013.04 http://git.denx.de/u-boot.git</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Patches are to be found in the Yocto meta-layer **meta-hachiko**. You can use them right away if you are
 working with the SDK:
 
-.. host::
+.. raw:: html
 
- patch -p1 -d /home/architech/Documents/u-boot < /home/architech/architech_sdk/architech/hachiko/yocto/meta-hachiko/recipes-bsp/u-boot/files/\*.patch
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-175' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-175" class="language-markup">patch -p1 -d /home/architech/Documents/u-boot &lt; /home/architech/architech_sdk/architech/hachiko/yocto/meta-hachiko/recipes-bsp/u-boot/files/*.patch</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 However, if you are not working with the official SDK the most general solution to check them out and patch
 the sources is:
 
-.. host::
+.. raw:: html
 
- | cd /home/architech/Documents
- | git clone -b dora https://github.com/architech-boards/meta-hachiko.git 
- | patch -p1 -d /home/architech/Documents/u-boot < /home/architech/Documents/meta-hachiko/recipes-bsp/u-boot/files/\*.patch
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-176' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-176" class="language-markup">cd /home/architech/Documents
+ git clone -b dora https://github.com/architech-boards/meta-hachiko.git
+ patch -p1 -d /home/architech/Documents/u-boot &lt; /home/architech/Documents/meta-hachiko/recipes-bsp/u-boot/files/*.patch</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Configuration and board files for Hachiko/SDRAM board are in:
 
-.. host::
+.. raw:: html
 
- | /home/architech/Documents/u-boot/board/renesas/hachiko/*
- | /home/architech/Documents/u-boot/include/configs/hachiko.h
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-177' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-177" class="language-markup">/home/architech/Documents/u-boot/board/renesas/hachiko/*
+ /home/architech/Documents/u-boot/include/configs/hachiko.h</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Suppose you modified something and you wanted to recompile the sources to test your patches, well, you
 need a cross-toolchain (see :ref:`manual_compilation_label` Section). Luckily, the SDK already contains
 the proper cross-toolchain. To use it to compile the bootloader or the operating system kernel, just run:
 
-.. host::
+.. raw:: html
 
- | source /home/architech/architech_sdk/architech/hachiko/toolchain/environment-nofs
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-178' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-178" class="language-markup">source /home/architech/architech_sdk/architech/hachiko/toolchain/environment-nofs</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 then you can run these commands to compile it:
 
-.. host::
+.. raw:: html
 
- | cd /home/architech/Documents/u-boot/
- | make mrproper
- | make hachiko64
- | make
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-179' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-179" class="language-markup">cd /home/architech/Documents/u-boot/
+ make mrproper
+ make hachiko64
+ make</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 
 Once the build process completes, you can find *u-boot.bin* file inside directory */home/architech/Documents/u-boot*.
@@ -95,31 +140,50 @@ Once the build process completes, you can find *u-boot.bin* file inside director
 If you are not working with the virtual machine, you need to get the toolchain from somewhere.
 The most comfortable way to get the toolchain is to ask *Bitbake* for it:
 
-.. host::
+.. raw:: html
 
- | cd /path/to/yocto/directory
- | source poky/oe-init-build-env
- | bitbake meta-toolchain
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1710' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1710" class="language-markup">cd /path/to/yocto/directory
+ source poky/oe-init-build-env
+ bitbake meta-toolchain</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 When *Bitbake* finishes, you find an installer script under directory:
 
-.. host::
+.. raw:: html
 
- /path/to/yocto/directory/build/tmp/deploy/sdk/
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1711' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1711" class="language-markup">/path/to/yocto/directory/build/tmp/deploy/sdk/</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Run the script and you get, under the installation directory, a script to *source* to get your environment
 almost in place for compiling. The name of the script is:
 
-.. host::
+.. raw:: html
 
- environment-setup-cortexa9hf-vfp-neon-poky-linux-gnueabi
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1712' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1712" class="language-markup">environment-setup-cortexa9hf-vfp-neon-poky-linux-gnueabi</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Anyway, the environment is not quite right for compiling the bootloader and the Linux kernel, you need to unset
 a few variables first to get it ready:
 
-.. host::
+.. raw:: html
 
- unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1713' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1713" class="language-markup">unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Here you go, you now have the proper working environment to compile *u-boot* (or the Linux kernel).
-

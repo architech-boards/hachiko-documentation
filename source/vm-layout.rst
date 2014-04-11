@@ -16,49 +16,54 @@ The virtual machine provided by Architech contains:
 All the aforementioned tools are installed under directory **/home/architech/architech_sdk**,
 its sub-directories main layout is the following:
 
-::
+.. raw:: html
 
-    architech_sdk
-        |
-        |_ splashscreen
-        |
-        |_ spashscreen-interface
-        |
-        |_ architech-manifest
-        |
-        |_ architech
-            |
-            |_ ...
-            |
-            |_ hachiko
-                |
-                |_ eclipse
-                |
-                |_ java
-                |
-                |_ qtcreator
-                |
-                |_ splashscreen
-                |
-                |_ sysroot
-                |
-                |_ toolchain
-                |
-                |_ workspace
-                |   |
-                |   |_ eclipse
-                |   |
-                |   |_ qt
-                |
-                |_ yocto
-                    |
-                    |_ build
-                    |
-                    |_ poky
-                    |
-                    |_ meta-hachiko
-                    |
-                    |_ ...
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'vm_layout_rst-host-111' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="vm_layout_rst-host-111" class="language-markup">architech_sdk
+     |
+     |_ splashscreen
+     |
+     |_ spashscreen-interface
+     |
+     |_ architech-manifest
+     |
+     |_ architech
+         |
+         |_ ...
+         |
+         |_ hachiko
+             |
+             |_ eclipse
+             |
+             |_ java
+             |
+             |_ qtcreator
+             |
+             |_ splashscreen
+             |
+             |_ sysroot
+             |
+             |_ toolchain
+             |
+             |_ workspace
+             |   |
+             |   |_ eclipse
+             |   |
+             |   |_ qt
+             |
+             |_ yocto
+                 |
+                 |_ build
+                 |
+                 |_ poky
+                 |
+                 |_ meta-hachiko
+                 |
+                 |_ ...</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 **hachiko** directory contains all the tools composing the ArchiTech SDK for Hachiko/SDRAM board,
 along with all the information needed by the splash screen application. In particular:
@@ -82,15 +87,14 @@ It can be opened by clicking on its *Desktop* icon.
     :align: center   
 
 Once started, you can can choose if you want to work with Architech's boards or with partners'
-ones.
+ones. For Hachiko/SDRAM, choose **ArchiTech**.
 
-.. image:: _static/splashscreen.png
+.. image:: _static/splashscreen-architech.png
     :align: center
 
-For Hachiko/SDRAM, choose **ArchiTech**.
 A list of all available Architech's boards will open, select Hachiko/SDRAM.
 
 A list of actions related to Hachiko/SDRAM that can be activated will appear.
 
-.. image:: _static/splashscreen-board-menu.png
+.. image:: _static/splashscreen-board-menu.jpg
     :align: center

@@ -1,5 +1,6 @@
+****************
 SDK Architecture
-^^^^^^^^^^^^^^^^
+****************
 
 This chapter gives an overview on how the SDK has been composed and where to find the tools
 on the virtual machine.

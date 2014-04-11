@@ -1,5 +1,6 @@
+*********
 The board
-^^^^^^^^^
+*********
 
 This chapter introduces the board, its hardware and how to boot it.
 

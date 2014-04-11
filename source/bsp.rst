@@ -1,5 +1,6 @@
+***
 BSP
-^^^
+***
 
 The Board Support Package is composed by a set files, patches, recipes, configuration files, etc.
 This chapter gives you the information you need when you want to customize something, fix a bug,

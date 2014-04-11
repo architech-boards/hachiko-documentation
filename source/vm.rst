@@ -21,7 +21,8 @@ Install the software with all the default options and run it following these ste
 
 1. From the menu: *File→ Import Appliance*
 
-.. image:: /_static/importAppliance.png
+.. image:: _static/importAppliance.png
+    :align: center
 
 2. Click on *Open appliance…* button and select the .ova file you downloaded.
 
@@ -35,7 +36,8 @@ Install the software with all the default options and run it following these ste
 
 5. Click the icon *Start* button on the toolbar.
 
-.. image:: /_static/vbStart.png
+.. image:: _static/vbStart.png
+    :align: center
 
 How to configure the network of the virtual machine
 ---------------------------------------------------
@@ -46,7 +48,8 @@ Another important thing to do is to set the IP address of the virtual machine as
 
 2. In *Wired* tab, select *Auto eth0* and press *Edit...* button.
 
-.. image:: /_static/auto-eth0.png
+.. image:: _static/auto-eth0.png
+    :align: center
 
 3. Click to *IPv4 Settings*, click on *Add* button and insert the following address:
 
@@ -63,7 +66,8 @@ How to setup the number of processor cores and the amount of RAM used by your vi
 
 To increase the performances of your virtual machine, you can configure the system settings. This is possible only if the virtual machine is off. First, select the Yocto based SDK virtual machine from the list of virtual machines, click on the  *Settings* icon in the *Oracle VM VirtualBox Manager* window:
 
-.. image:: /_static/setvm-1.png
+.. image:: _static/setvm-1.png
+    :align: center
 
 In the left menu, click on *System*. In the *Motherboard* tab you can select how much **RAM** you want to assign to the virtual machine.
 Select *Processor* tab to select how many processor **cores** you want to assign to the virtual machine.

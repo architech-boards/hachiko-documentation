@@ -10,17 +10,26 @@ By default, Hachiko/SDRAM Yocto/OpenEmbedded SDK will generate two different typ
 The *.tar.bz2* file can be expanded in your final medium partition (flash memory or USB stick) or on your host development system and used for build purposes with the Yocto Project.
 File *.jffs2* can be written out "as is" on the final medium (usually flash NOR partition) with, for example, *dd* program:
 
-.. host::
+.. raw:: html
 
- sudo dd if=/path/to/image.jffs2 of=/your/sd/card/device
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-151' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-151" class="language-markup">sudo dd if=/path/to/image.jffs2 of=/path/to/your/USB/device</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 or 
 
-.. board::
+.. raw:: html
 
- flashcp -v /path/to/image.jffs2 /dev/mtdX
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-board-281' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-board-281" class="language-markup">flashcp -v /path/to/image.jffs2 /dev/mtd4</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 .. important::
 
  Be very careful when you use *dd* or *flashcp* to write to a device to pick up the right device
-

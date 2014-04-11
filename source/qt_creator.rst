@@ -24,23 +24,38 @@ Qt Creator
 
 3. Replicate the same root file system into directory
 
-.. host::
+.. raw:: html
 
- /home/architech/architech_sdk/architech/hachiko/sysroot
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'qt_creator_rst-host-161' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-host-161" class="language-markup">/home/architech/architech_sdk/architech/hachiko/sysroot</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 4. Copy the Qt Libraries to the board media used to boot
 
-.. host::
+.. raw:: html
 
- | sudo mkdir -p /path/to/board/sysroot/**usr/local/Trolltech/**
- | sudo cp -r /usr/local/Trolltech/Hachiko/\* /path/to/board/sysroot/**usr/local/Trolltech/**
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'qt_creator_rst-host-162' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-host-162" class="language-markup">sudo mkdir -p /path/to/board/sysroot/**usr/local/Trolltech/**
+ sudo cp -r /usr/local/Trolltech/Hachiko/\* /path/to/board/sysroot/**usr/local/Trolltech/**</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 5. Copy the Qt Libraries to your sdk sysroot directory
 
-.. host::
+.. raw:: html
 
- | sudo mkdir -p ~/architech_sdk/architech/hachiko/sysroot/usr/local/Trolltech/
- | sudo cp -r /usr/local/Trolltech/Hachiko/\* ~/architech_sdk/architech/hachiko/sysroot/usr/local/Trolltech
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'qt_creator_rst-host-163' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-host-163" class="language-markup">sudo mkdir -p ~/architech_sdk/architech/hachiko/sysroot/usr/local/Trolltech/
+ sudo cp -r /usr/local/Trolltech/Hachiko/\* ~/architech_sdk/architech/hachiko/sysroot/usr/local/Trolltech</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 6. Unmount the media used to boot the board from your computer and insert it into the board
 
@@ -50,9 +65,14 @@ Qt Creator
 
 If you based your root file system on *qt4e-demo-image*, be sure you execute this command
 
-.. board::
+.. raw:: html
 
- /etc/init.d/qtdemo stop
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'qt_creator_rst-board-291' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-board-291" class="language-markup">/etc/init.d/qtdemo stop</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 to stop the execution of the demo application.
 
@@ -71,59 +91,78 @@ To create the project follow these steps:
 
 1. Use the **Welcome Screen** to run Qt Creator by selecting *Architech→Hachiko/SDRAM→Develop with Qt Creator*
 
-.. image:: _static/qtCreatorStart.png
+.. image:: _static/qtCreatorStart.jpg
+	   :align: center
 
 2. Go to *File -> Open File or Project* to open **QtHelloWorld.pro** file located in */home/architech/architech_sdk/architech/hachiko/workspace/qt/QtHelloWorld/* directory.
 
 3. Click on "QtHelloWorld" icon to open project menu.
 
 .. image:: _static/qt-1.png
+	   :align: center
 
 4. Select the build configuration: **Desktop - Debug**.
 
-.. image:: _static/qt-2.png
+.. image:: _static/qt-2.jpg
+	   :align: center
 
 5. To build the project, click on the bottom-left icon.
 
 .. image:: _static/qt-3.png
+	   :align: center
 
 6. Once you built the project, click on the green triangle to run it.
 
 .. image:: _static/qt-4.png
+	   :align: center
 
 7. Congratulations! You just built your first Qt application for x86.
 
 .. image:: _static/qt-5.png
+	   :align: center
 
 In the next section we will debug our Hello World! application directly on Hachiko/SDRAM.
 
 Debug Hello World project
 -------------------------
 
-8. Select build configuration: **hachiko - Debug** and build the project.
+1. Select build configuration: **hachiko - Debug** and build the project.
 
-.. image:: _static/qt-10.png
+.. image:: _static/qt-10.jpg
+	   :align: center
 
-9. Copy the generated executable to the target board (e.g /home/root/).
+2. Copy the generated executable to the target board (e.g /home/root/).
 
-.. host::
+.. raw:: html
 
-  scp /home/architech/architech_sdk/architech/hachiko/workspace/qt/build-QtHelloWorld-Hachiko-Debug/QtHelloWorld root@192.168.0.10:/home/root
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'qt_creator_rst-host-164' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-host-164" class="language-markup">scp /home/architech/architech_sdk/architech/hachiko/workspace/qt/build-QtHelloWorld-Hachiko-Debug/QtHelloWorld root@192.168.0.10:/home/root</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
-10. Use minicom to launch gdbserver application on the target board:
+3. Use minicom to launch gdbserver application on the target board:
 
-.. board::
+.. raw:: html
 
-  gdbserver :10000 QtHelloWorld -qws
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'qt_creator_rst-board-292' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-board-292" class="language-markup">gdbserver :10000 QtHelloWorld -qws</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
-11. | In Qt Creator, open the source file main.cpp and set a breakpoint at line 6. 
+4. | In Qt Creator, open the source file main.cpp and set a breakpoint at line 6. 
     | To do this go with the mouse at line 6 and click with the right button to open the menu, select **Set brackpoint at line 6**
 
 .. image:: _static/qt-6.png
+	   :align: center
 
-12. Go to *Debug→Start Debugging→Attach To Remote Debug Server*, a form named "Start Debugger" will appear, insert the following data:
+5. Go to *Debug→Start Debugging→Attach To Remote Debug Server*, a form named "Start Debugger" will appear, insert the following data:
 
-.. image:: _static/qt-7.png
+.. image:: _static/qt-7.jpg
+	   :align: center
 
 - Kit: **hachiko**
 
@@ -132,8 +171,9 @@ Debug Hello World project
 Press **OK** button to start the debug.
 
 .. image:: _static/qt-8.png
+	   :align: center
 
-13. The hotkeys to debug the application are:
+6. The hotkeys to debug the application are:
 
 - **F10**: Step over
 
@@ -144,6 +184,6 @@ Press **OK** button to start the debug.
 - **F5**: Continue, or press this icon:
 
 .. image:: _static/qt-9.png
+	   :align: center
 
-14. To successfully exit from the debug it is better to close the graphical application from the target board with the mouse by clicking on the 'X' symbol. 
-
+7. To successfully exit from the debug it is better to close the graphical application from the target board with the mouse by clicking on the 'X' symbol. 

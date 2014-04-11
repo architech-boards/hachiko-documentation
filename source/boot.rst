@@ -114,24 +114,39 @@ The USB pen driver is required to have one single *EXT2* partition with a start
 sector of the partition below the 63rd sector. It is possible to use tools as
 *fdisk* or *cfdisk* to partition the USB drive.
 
-.. host::
+.. raw:: html
 
- cfdisk /path/to/your/USB/device
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-11' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-11" class="language-markup">cfdisk /path/to/your/USB/device</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 As alternative it is possible to use the sfdisk tools to have the partition
 correctly aligned to the first sector:
 
-.. host::
+.. raw:: html
 
- | sfdisk /path/to/your/USB/device << EOF
- | 0,
- | EOF
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-12' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-12" class="language-markup">sfdisk /path/to/your/USB/device &lt;&lt; EOF
+ 0,
+ EOF</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 | To format the partition it is enough:
 
-.. host::
+.. raw:: html
 
- mkfs.ext2 /path/to/your/USB/device/partition
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-13' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-13" class="language-markup">mkfs.ext2 /path/to/your/USB/device/partition</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 
 USB content
@@ -141,9 +156,14 @@ When booting from USB, U-Boot expects to find a valid single *EXT2* partition in
 
 When using Yocto to generate the rootfs we need to extract the compressed rootfs found in
 
-.. host::
+.. raw:: html
 
- /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko64
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-14' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-14" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko64</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 in the partition on the USB and copy the kernel in */boot/uImage* and *DTB* file in */boot/rza1-hachiko.dtb*.
 
@@ -192,7 +212,7 @@ NOR content
 To write in NOR and replace or update the content of the NOR partitions you can go through U-Boot or Linux. It is strongly recommended to use Linux for writing new data in NOR partitions, especially when no external SDRAM is available.
 
 Using U-Boot [not recommended]
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using U-Boot for writing or updating data in SPI NOR is not advisable especially when no external SDRAM is available. 
 
@@ -204,10 +224,15 @@ The process of writing data in serial NOR using U-Boot goes through 3 main steps
 
 1. Assuming you have the file on the USB pen drive you have to load it in RAM using the following commands:
 
-.. board::
+.. raw:: html
 
- usb start
- ext2load usb 0 0x0c000000 /path/to/your/u-boot.bin
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-221' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-221" class="language-markup">usb start
+ ext2load usb 0 0x0c000000 /path/to/your/u-boot.bin</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 The output from the command is also the size of the file loaded, info useful for step (3).
 
@@ -221,17 +246,27 @@ Please, note that while *spibsc0_loader*, *spibsc0_kernel*, and *spibsc0_dtb* pa
 
 2. To erase data on the NOR partition;
 
-.. board::
+.. raw:: html
 
- sf erase $OFFSET $SIZE
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-222' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-222" class="language-markup">sf erase $OFFSET $SIZE</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 where $OFFSET is the partition offset and $SIZE its size in bytes.
 
 3. To write new data:
 
-.. board::
+.. raw:: html
 
- sf write $RAM_ADDR $OFFSET $SIZE
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-223' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-223" class="language-markup">sf write $RAM_ADDR $OFFSET $SIZE</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 where $RAM_ADDR is the temporary RAM location holding our file (tipically 0x0c000000), $OFFSET is the partition offset and $SIZE is the file size in bytes as obtained by the output of the comman ext2load in step (1).
 
@@ -240,61 +275,95 @@ For more informations about flash managing with U-Boot refer to:
 * `Renesas U-Boot documentation <http://downloads.architechboards.com/hachiko/doc/users_manual_u-boot_E.txt>`_ 
 
 Using Linux
------------
+^^^^^^^^^^^
 
 To use linux for writing or updating data on the serial NOR you are going to need **MTD utils**. It is possible to compile a small image containing the MTD utils with Yocto by means, for example, of image *core-image-minimal-mtdutils* that can be generated by *Bitbake* with this command line:
 
-.. host::
+.. raw:: html
 
- bitbake core-image-minimal-mtdutils
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-15' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-15" class="language-markup">bitbake core-image-minimal-mtdutils</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 In Linux, the process is made easier by the MTD framework that remap each NOR partition to a different device file. In particular:
 
-.. board::
+.. raw:: html
 
- | /dev/mtd0: spibsc0_loader
- | /dev/mtd1: spibsc0_bootenv
- | /dev/mtd2: spibsc0_kernel
- | /dev/mtd3: spibsc0_dtb
- | /dev/mtd4: spibsc0_rootfs
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-224' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-224" class="language-markup">/dev/mtd0: spibsc0_loader
+ /dev/mtd1: spibsc0_bootenv
+ /dev/mtd2: spibsc0_kernel
+ /dev/mtd3: spibsc0_dtb
+ /dev/mtd4: spibsc0_rootfs</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Again the process goes through 2 steps: (1) erasing the content of the serial NOR partition and (2) write the new data.
 
 1. To erase the content of the partition the tool flash_erase can be used. For raw files as *u-boot.bin*, *uImage* or *rza1-hachiko.dtb*, the tool can be used as follow:
 
-.. board::
+.. raw:: html
 
- flash_erase /path/to/your/mtd/device 0 0
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-225' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-225" class="language-markup">flash_erase /path/to/your/mtd/device 0 0</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 This command completely erases the content of the partition. For the root file system the command is slightly different, since being *spibsc0_rootfs* a *JFFS2* partition, it requires proper formatting, so for mtd4 device you need to run this command:
 
-.. board::
+.. raw:: html
 
- flash_erase -j /dev/mtd4 0 0
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-226' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-226" class="language-markup">flash_erase -j /dev/mtd4 0 0</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 2. To write the new data on the serial NOR the tool flashcp is used. Again for raw file the simple syntax is:
 
-.. board::
+.. raw:: html
 
- flashcp -v /path/to/your/file /path/to/your/mtd/device
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-227' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-227" class="language-markup">flashcp -v /path/to/your/file /path/to/your/mtd/device</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 For rootfs we have two different ways to write data in *spibsc0_rootfs* partition:
 
 1. Using the image file *.jffs2* generated by Yocto
 
-.. board::
+.. raw:: html
 
- flashcp -v /path/to/your/image/file.jffs2 /dev/mtd4
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-228' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-228" class="language-markup">flashcp -v /path/to/your/image/file.jffs2 /dev/mtd4</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 2. If you wish to use the image file *.tar.bz2* instead, you need to mount the partition and decompress the file content in place.
 
-.. board::
+.. raw:: html
 
- | mount -t jffs2 mtd4 /mnt/
- | tar xv -C /mnt/ -f /path/to/your/image/file.tar.bz2
- | umount /mnt/
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-229' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-229" class="language-markup">mount -t jffs2 mtd4 /mnt/
+ tar xv -C /mnt/ -f /path/to/your/image/file.tar.bz2
+ umount /mnt/</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 For more information on how to manage flash storage with Linux:
 
   `http://free-electrons.com/blog/managing-flash-storage-with-linux/ <http://free-electrons.com/blog/managing-flash-storage-with-linux/>`_
-

@@ -1,7 +1,8 @@
 .. _unboxing_label:
 
+********
 Unboxing
-^^^^^^^^
+********
 
 This amazing board gets the power directly from the USB, so it comes with no external power supply.
 

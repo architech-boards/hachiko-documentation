@@ -1,5 +1,6 @@
+***
 FAQ
-^^^
+***
 
 Virtual Machine
 ===============
@@ -42,10 +43,15 @@ How to switch from hachiko to hachiko/SDRAM and viceversa
 
 Switching from hachiko to hachiko/SDRAM or viceversa (adding or removing the external SDRAM) is a delicate operation that involves flashing a new U-Boot and using a new Kernel. To flash a new U-Boot it is needed to follow Section :ref:`flashing_NOR`, writing the new U-Boot from the U-Boot itself or from Linux. After the first boot with the new U-Boot it is always suggested to give the following commands to reset the U-Boot environment stored in the second partition of the serial NOR:
 
-.. board::
+.. raw:: html
 
- | env default -a
- | saveenv 
+ <div>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'faq_rst-board-271' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="faq_rst-board-271" class="language-markup">env default -a
+ saveenv</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 and reboot the board.
 
@@ -134,4 +140,3 @@ to change them the file arch/arm/mach-shmobile/rskrza1-vdc5fb.c must be modified
 ::
 
  struct fb_videomode videomode_lvds
-

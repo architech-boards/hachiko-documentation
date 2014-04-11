@@ -22,24 +22,39 @@ Environment
 To properly run Bitbake, the first thing you need to do is setup the shell environment.
 Luckily, there is a script that takes care of it, all you need to do is:
 
-.. host::
+.. raw:: html
 
- source /path/to/oe-init-build-env /path/to/build/directory
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-191' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-191" class="language-markup">source /path/to/oe-init-build-env /path/to/build/directory</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Inside the virtual machine, you can find *oe-init-build-env* script inside:
 
-.. host::
+.. raw:: html
 
- /home/architech/architech_sdk/architech/hachiko/yocto/poky
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-192' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-192" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/poky</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 If you omit the build directory path, a directory named **build** will be created under your 
 current working directory.
 
 By default, with the SDK, the script is used like this:
 
-.. host::
+.. raw:: html
 
- source /home/architech/architech_sdk/architech/hachiko/yocto/poky/oe-init-build-env
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-193' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-193" class="language-markup">source /home/architech/architech_sdk/architech/hachiko/yocto/poky/oe-init-build-env</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Your current working directory changes to such a directory and you can customize configurations
 files (that the environment script put in place for you when creating the directory), run Bitbake
@@ -53,9 +68,14 @@ and will change your current working directory to that specific directory.
 
 The default build directory for Hachiko/SDRAM is located under:
 
-.. host::
+.. raw:: html
 
- /home/architech/architech_sdk/architech/hachiko/yocto/build
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-194' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-194" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 and the splash screen has a facility (a button located under Hachiko/SDRAM's page) that can take you
 there with the right environment already in place so you are productive right away.
@@ -75,7 +95,19 @@ hachiko64.
 *BB_NUMBER_THREADS* and *PARALLEL_MAKE* can help you speed up the build process. *BB_NUMBER_THREADS*
 is used to tell Bitbake how many tasks can be executed at the same time, while *PARALLEL_MAKE* contains
 the **-j** option to give to *make* program when issued. Both *BB_NUMBER_THREADS* and *PARALLEL_MAKE*
-are related to the number of processors of your (virtual) machine.
+are related to the number of processors of your (virtual) machine, and should be set with a number
+that is two times the number of processors on your (virtual) machine. If for example, your (virtual)
+machine has/sees four cores, then you should set those variables like this:
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-195' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-195" class="language-markup">BB_NUMBER_THREADS ?= "8"
+ PARALLEL_MAKE ?= "-j 8"</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 *bblayers.conf* is used to tell Bitbake which meta-layers to take into account when parsing/looking for
 recipes, machine, distributions, configuration files, bbclasses, and so on. The most important variable
@@ -91,38 +123,63 @@ With your shell setup with the proper environment and your configuration files c
 board and your will, you are ready to use Bitbake.
 The first suggestion is to run:
 
-.. host::
+.. raw:: html
 
- bitbake -h
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-196' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-196" class="language-markup">bitbake -h</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Bitbake will show you all the options it can be run with.
 During normal activity you will need to simply run a command like:
 
-.. host::
+.. raw:: html
 
- bitbake <recipe name>
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-197' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-197" class="language-markup">bitbake &lt;recipe name&gt;</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 for example:
 
-.. host::
+.. raw:: html
 
- bitbake core-image-minimal-dev
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-198' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-198" class="language-markup">bitbake core-image-minimal-dev</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Such a comman will build bootloader, Linux kernel and a root file system.
 *core-image-minimal-dev* tells Bitbake to execute whatever recipe
 
-.. host::
+.. raw:: html
 
- /home/architech/architech_sdk/architech/hachiko/yocto/poky/meta/recipes-extended/images/core-image-lsb-dev.bb
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-199' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-199" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/poky/meta/recipes-extended/images/core-image-lsb-dev.bb</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 tells it to do, so, you just place the name of the recipe without the extension.
 
 Of course, there are times when you want more control over Bitbake, for example, you want to execute just one task
 like recompiling the Linux kernel, no matter what. That action can be achieved with:
 
-.. host::
-    
- bitbake -c compile -f virtual/kernel
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-1910' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-1910" class="language-markup">bitbake -c compile -f virtual/kernel</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 where *-c compile* states the you want to execute the *do_compile* task and *-f* forces Bitbake
 to execute the command even if it thinks that there are no modifications and hence there is no need to 
