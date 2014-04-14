@@ -149,7 +149,7 @@ You can easily setup a new repository for your custom builds:
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-54' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-54" class="language-markup">sudo ln -s /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/ipk/ hachiko-ipk</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-54" class="language-markup">sudo ln -s /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/ipk/ /var/www/hachiko-ipk</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

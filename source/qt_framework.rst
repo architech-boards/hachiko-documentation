@@ -32,7 +32,7 @@ So, to install *qt-everywhere* for *x86* from sources, the usual drill of downlo
  <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_framework_rst-host-102" class="language-markup">wget http://download.qt-project.org/official_releases/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.zip
  unzip qt-everywhere-opensource-src-4.8.5.zip
  cd qt-everywhere-opensource-src-4.8.5
- ./configure /\*Choose Open source Edition when asked, and accept the license\*/
+ ./configure /*Choose Open source Edition when asked, and accept the license*/
  make
  make install</code></pre>
  <script src="_static/prism.js"></script>

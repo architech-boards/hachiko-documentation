@@ -39,8 +39,8 @@ Qt Creator
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'qt_creator_rst-host-162' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-host-162" class="language-markup">sudo mkdir -p /path/to/board/sysroot/**usr/local/Trolltech/**
- sudo cp -r /usr/local/Trolltech/Hachiko/\* /path/to/board/sysroot/**usr/local/Trolltech/**</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-host-162" class="language-markup">sudo mkdir -p /path/to/board/sysroot/usr/local/Trolltech/
+ sudo cp -r /usr/local/Trolltech/Hachiko/* /path/to/board/sysroot/usr/local/Trolltech/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -52,7 +52,7 @@ Qt Creator
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'qt_creator_rst-host-163' );">select</a></div>
  <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-host-163" class="language-markup">sudo mkdir -p ~/architech_sdk/architech/hachiko/sysroot/usr/local/Trolltech/
- sudo cp -r /usr/local/Trolltech/Hachiko/\* ~/architech_sdk/architech/hachiko/sysroot/usr/local/Trolltech</code></pre>
+ sudo cp -r /usr/local/Trolltech/Hachiko/* ~/architech_sdk/architech/hachiko/sysroot/usr/local/Trolltech</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -166,7 +166,16 @@ Debug Hello World project
 
 - Kit: **hachiko**
 
-- Local executable: **/home/architech/architech_sdk/architech/hachiko/workspace/qt/build-QtHelloWorld-hachiko-Debug/QtHelloWorld**
+- Local executable:
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'qt_creator_rst-host-165' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="qt_creator_rst-host-165" class="language-markup">/home/architech/architech_sdk/architech/hachiko/workspace/qt/build-QtHelloWorld-hachiko-Debug/QtHelloWorld</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Press **OK** button to start the debug.
 
