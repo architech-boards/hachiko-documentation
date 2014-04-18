@@ -35,7 +35,7 @@ To deploy the root file system, you are going to need an USB flash drive.
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-63' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-63" class="language-markup">sudo tar -xjf /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko/core-image-minimal-dev-hachiko.tar.bz2 -C /path/to/usb/media</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-63" class="language-markup">sudo tar -xjf /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko64/core-image-minimal-dev-hachiko.tar.bz2 -C /path/to/usb/media</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -46,7 +46,7 @@ To deploy the root file system, you are going to need an USB flash drive.
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-64' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-64" class="language-markup">cp /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko/uImage /path/to/usb/media/boot</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-64" class="language-markup">cp /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko64/uImage /path/to/usb/media/boot</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -57,7 +57,7 @@ To deploy the root file system, you are going to need an USB flash drive.
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-65' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-65" class="language-markup">cp /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko/uImage-rza1-hachiko.dtb  /path/to/usb/media/boot/rza1-hachiko.dtb</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-65" class="language-markup">cp /home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko64/uImage-rza1-hachiko.dtb  /path/to/usb/media/boot/rza1-hachiko.dtb</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
