@@ -10,8 +10,8 @@ meta-hachiko is stored in a git repository that can be cloned with:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-201' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-201" class="language-markup">git clone -b dora https://github.com/architech-boards/meta-hachiko.git</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-191' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-191" class="language-markup">git clone -b dora https://github.com/architech-boards/meta-hachiko.git</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -32,8 +32,8 @@ To manually select board and distribution for *Bitbake*, make sure that file
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-202' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-202" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/conf/local.conf</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-192' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-192" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/conf/local.conf</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -43,8 +43,8 @@ contains the assignment of these variables:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-203' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-203" class="language-markup">MACHINE = "hachiko64"
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-193' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-193" class="language-markup">MACHINE = "hachiko64"
  DISTRO = "poky"</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -66,8 +66,8 @@ Within the SDK, the files will be emitted to directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-204' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-204" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko64/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-194' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-194" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/deploy/images/hachiko64/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -77,8 +77,8 @@ If you are not working with the SDK, just replace:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-205' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-205" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-195' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-195" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

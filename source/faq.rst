@@ -46,8 +46,8 @@ Switching from hachiko to hachiko/SDRAM or viceversa (adding or removing the ext
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'faq_rst-board-271' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="faq_rst-board-271" class="language-markup">env default -a
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'faq_rst-board-261' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="faq_rst-board-261" class="language-markup">env default -a
  saveenv</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>

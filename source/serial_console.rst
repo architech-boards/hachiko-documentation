@@ -33,8 +33,8 @@ the name of the device is by looking to the kernel messages, so:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-131' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-131" class="language-markup">[ 2912.634893] usb 3-4: &gt;new full-speed USB device number 6 using xhci_hcd
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-121' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-121" class="language-markup">[ 2912.634893] usb 3-4: &gt;new full-speed USB device number 6 using xhci_hcd
  [ 2912.658153] usb 3-4: &gt;New USB device found, idVendor=0403, idProduct=6001
  [ 2912.658160] usb 3-4: &gt;New USB device strings: Mfr=1, Product=2, SerialNumber=3
  [ 2912.658164] usb 3-4: &gt;Product: Hachiko Rev. B

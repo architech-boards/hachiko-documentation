@@ -13,8 +13,8 @@ File *.jffs2* can be written out "as is" on the final medium (usually flash NOR 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-151' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-151" class="language-markup">sudo dd if=/path/to/image.jffs2 of=/path/to/your/USB/device</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-141' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-141" class="language-markup">sudo dd if=/path/to/image.jffs2 of=/path/to/your/USB/device</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -24,8 +24,8 @@ or
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-board-281' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-board-281" class="language-markup">flashcp -v /path/to/image.jffs2 /dev/mtd4</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-board-271' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-board-271" class="language-markup">flashcp -v /path/to/image.jffs2 /dev/mtd4</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

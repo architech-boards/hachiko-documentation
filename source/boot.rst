@@ -227,8 +227,8 @@ The process of writing data in serial NOR using U-Boot goes through 3 main steps
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-221' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-221" class="language-markup">usb start
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-211' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-211" class="language-markup">usb start
  ext2load usb 0 0x0c000000 /path/to/your/u-boot.bin</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -249,8 +249,8 @@ Please, note that while *spibsc0_loader*, *spibsc0_kernel*, and *spibsc0_dtb* pa
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-222' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-222" class="language-markup">sf erase $OFFSET $SIZE</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-212' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-212" class="language-markup">sf erase $OFFSET $SIZE</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -262,8 +262,8 @@ where $OFFSET is the partition offset and $SIZE its size in bytes.
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-223' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-223" class="language-markup">sf write $RAM_ADDR $OFFSET $SIZE</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-213' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-213" class="language-markup">sf write $RAM_ADDR $OFFSET $SIZE</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -293,8 +293,8 @@ In Linux, the process is made easier by the MTD framework that remap each NOR pa
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-224' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-224" class="language-markup">/dev/mtd0: spibsc0_loader
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-214' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-214" class="language-markup">/dev/mtd0: spibsc0_loader
  /dev/mtd1: spibsc0_bootenv
  /dev/mtd2: spibsc0_kernel
  /dev/mtd3: spibsc0_dtb
@@ -310,8 +310,8 @@ Again the process goes through 2 steps: (1) erasing the content of the serial NO
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-225' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-225" class="language-markup">flash_erase /path/to/your/mtd/device 0 0</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-215' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-215" class="language-markup">flash_erase /path/to/your/mtd/device 0 0</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -321,8 +321,8 @@ This command completely erases the content of the partition. For the root file s
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-226' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-226" class="language-markup">flash_erase -j /dev/mtd4 0 0</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-216' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-216" class="language-markup">flash_erase -j /dev/mtd4 0 0</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -332,8 +332,8 @@ This command completely erases the content of the partition. For the root file s
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-227' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-227" class="language-markup">flashcp -v /path/to/your/file /path/to/your/mtd/device</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-217' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-217" class="language-markup">flashcp -v /path/to/your/file /path/to/your/mtd/device</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -345,8 +345,8 @@ For rootfs we have two different ways to write data in *spibsc0_rootfs* partitio
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-228' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-228" class="language-markup">flashcp -v /path/to/your/image/file.jffs2 /dev/mtd4</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-218' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-218" class="language-markup">flashcp -v /path/to/your/image/file.jffs2 /dev/mtd4</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -356,8 +356,8 @@ For rootfs we have two different ways to write data in *spibsc0_rootfs* partitio
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-229' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-229" class="language-markup">mount -t jffs2 mtd4 /mnt/
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-board-219' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-board-219" class="language-markup">mount -t jffs2 mtd4 /mnt/
  tar xv -C /mnt/ -f /path/to/your/image/file.tar.bz2
  umount /mnt/</code></pre>
  <script src="_static/prism.js"></script>

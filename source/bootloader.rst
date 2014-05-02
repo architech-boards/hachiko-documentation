@@ -12,8 +12,8 @@ Anyway, we will assume in this giude that u-boot sources will be copied to:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-171' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-171" class="language-markup">/home/architech/Documents/u-boot</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-161' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-161" class="language-markup">/home/architech/Documents/u-boot</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -32,8 +32,8 @@ about is this one:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-172' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-172" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/work/hachiko64-poky-linux-gnueabi/u-boot/2013.04-r0/u-boot-2013.04/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-162' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-162" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/tmp/work/hachiko64-poky-linux-gnueabi/u-boot/2013.04-r0/u-boot-2013.04/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -43,8 +43,8 @@ Replace:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-173' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-173" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-163' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-163" class="language-markup">/home/architech/architech_sdk/architech/hachiko/yocto/build/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -62,8 +62,8 @@ otherwise a git repository is available for cloning:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-174' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-174" class="language-markup">cd /home/architech/Documents
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-164' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-164" class="language-markup">cd /home/architech/Documents
  git clone -b v2013.04 http://git.denx.de/u-boot.git</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -75,8 +75,8 @@ working with the SDK:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-175' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-175" class="language-markup">patch -p1 -d /home/architech/Documents/u-boot &lt; /home/architech/architech_sdk/architech/hachiko/yocto/meta-hachiko/recipes-bsp/u-boot/files/*.patch</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-165' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-165" class="language-markup">patch -p1 -d /home/architech/Documents/u-boot &lt; /home/architech/architech_sdk/architech/hachiko/yocto/meta-hachiko/recipes-bsp/u-boot/files/*.patch</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -87,8 +87,8 @@ the sources is:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-176' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-176" class="language-markup">cd /home/architech/Documents
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-166' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-166" class="language-markup">cd /home/architech/Documents
  git clone -b dora https://github.com/architech-boards/meta-hachiko.git
  patch -p1 -d /home/architech/Documents/u-boot &lt; /home/architech/Documents/meta-hachiko/recipes-bsp/u-boot/files/*.patch</code></pre>
  <script src="_static/prism.js"></script>
@@ -100,8 +100,8 @@ Configuration and board files for Hachiko/SDRAM board are in:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-177' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-177" class="language-markup">/home/architech/Documents/u-boot/board/renesas/hachiko/*
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-167' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-167" class="language-markup">/home/architech/Documents/u-boot/board/renesas/hachiko/*
  /home/architech/Documents/u-boot/include/configs/hachiko.h</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -114,8 +114,8 @@ the proper cross-toolchain. To use it to compile the bootloader or the operating
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-178' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-178" class="language-markup">source /home/architech/architech_sdk/architech/hachiko/toolchain/environment-nofs</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-168' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-168" class="language-markup">source /home/architech/architech_sdk/architech/hachiko/toolchain/environment-nofs</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -125,8 +125,8 @@ then you can run these commands to compile it:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-179' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-179" class="language-markup">cd /home/architech/Documents/u-boot/
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-169' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-169" class="language-markup">cd /home/architech/Documents/u-boot/
  make mrproper
  make hachiko64
  make</code></pre>
@@ -143,8 +143,8 @@ The most comfortable way to get the toolchain is to ask *Bitbake* for it:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1710' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1710" class="language-markup">cd /path/to/yocto/directory
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1610' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1610" class="language-markup">cd /path/to/yocto/directory
  source poky/oe-init-build-env
  bitbake meta-toolchain</code></pre>
  <script src="_static/prism.js"></script>
@@ -156,8 +156,8 @@ When *Bitbake* finishes, you find an installer script under directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1711' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1711" class="language-markup">/path/to/yocto/directory/build/tmp/deploy/sdk/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1611' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1611" class="language-markup">/path/to/yocto/directory/build/tmp/deploy/sdk/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -168,8 +168,8 @@ almost in place for compiling. The name of the script is:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1712' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1712" class="language-markup">environment-setup-cortexa9hf-vfp-neon-poky-linux-gnueabi</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1612' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1612" class="language-markup">environment-setup-cortexa9hf-vfp-neon-poky-linux-gnueabi</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -180,8 +180,8 @@ a few variables first to get it ready:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1713' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1713" class="language-markup">unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-1613' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-1613" class="language-markup">unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
