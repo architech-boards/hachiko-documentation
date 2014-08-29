@@ -2,6 +2,12 @@
 Architech's Hachiko/SDRAM documentation
 ***************************************
 
+:Version: 1.0.1A
+:Copyright: Architech
+:Date: 28/01/2014
+
+This documentation is old, you can find the last release: `Here<http://architechboards-hachiko.readthedocs.org>`_
+
 .. image:: _static/board.png
     :align: center
 
