@@ -3,7 +3,7 @@ Architech's Hachiko/SDRAM documentation
 ***************************************
 
 :Version: 1.1.0A
-:Copyright: Architech
+:Copyright: (C)2016 Avnet Silica company
 :Date: 08/08/2014
 
 .. image:: _static/board.png
